@@ -2,18 +2,18 @@
 import os
 import getpass
 
-from .infomodule import info
+from .infomodule import make_pass
 
-class hide():
-    def __init__(self, folder_name):
-        #allows only sudo
-        os.system('sudo chown root {}'.format(folder_name))
 
-        #removes access to users, groups, and others
-        os.system('chmod ugo-rwx {}'.format(folder_name))
+def hide(folder_name):
+    #removes access to users, groups, and others
+    os.system('chmod ugo-rwx {}'.format(folder_name))
 
-        #hides folder
-        os.system('sudo chflags hiiden {}'.format(folder_name))
+    #hides folder
+    os.system('chflags hidden {}'.format(folder_name))
 
-        #open info() to save pass and number
-        info()
+    #allows only sudo
+    os.system('sudo chown root {}'.format(folder_name))
+
+    #open info() to save pass and number
+    make_pass()
