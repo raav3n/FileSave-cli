@@ -11,7 +11,6 @@ import random
 
 def verification(phone, carrier):
     userinfo = phone + carrier
-
     # Establish a secure session with gmail's outgoing SMTP server using your gmail account
     server = smtplib.SMTP( "smtp.gmail.com", 587 )
 
@@ -27,5 +26,17 @@ def verification(phone, carrier):
 
     # Send text message through SMS gateway of destination number
     server.sendmail('FileSave', userinfo, code)
-    #3234949031@pm.sprint.com
-    #3236371711@mms.att.net
+
+    code_in = raw_input('Please enter code sent (may take 1-2 minutes): ')
+    while code_gen != int(code_in):
+        option = raw_input('Sorry that was incorrect. Would you like to\nA)Try again\nB)Get a new code\nC)Cancel\n').upper()
+        if option == 'A':
+            code_in = raw_input('Please input code: ')
+        elif option == 'B':
+            verification(phone, carrier)
+            code_in = raw_input("Please enter new code: ")
+        elif option == 'C':
+            print("Now complete.")
+            break
+    # else:
+    #     print('Number Saved.\nNow complete.')

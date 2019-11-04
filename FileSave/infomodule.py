@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from cryptography.fernet import Fernet
-from .twostepmodule import verification
+from twostepmodule import verification
+
 
 def make_pass():
     user_carrier = ''
@@ -29,14 +30,16 @@ def phone_two_auth():
             user_carrier = v
     else:
         print('Now please enter your number for Two-Step Verification')
-        number = raw_input('Now input your phone number :')
+        number = raw_input('Now input your phone number: ')
         temp = raw_input("Please type in the number again: ")
         while number != temp:
-            raw_print('Sorry, there was a mistake. Please try again')
+            print('Sorry, there was a mistake. Please try again')
             number = raw_input('Input your number: ')
             temp = raw_input('Enter number once more :')
         else:
-            verification(number, user_carrier)
+            verification(number,user_carrier)
+
+
 
 
 #encrypts password and phone to move to file
