@@ -13,9 +13,10 @@ Replace "exfolder" with your folder name
 ```
 filesave hide exfolder
 ```
-Be sure to create a pass word and phone number if you wish for 2-auth
+Be sure to create a password and phone number if you wish for 2-auth
 
 ### How to reveal folder
 ```
 filesave show exfolder
 ```
+Enter password and complete phone verificaton if set up.

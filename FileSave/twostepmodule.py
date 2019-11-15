@@ -37,6 +37,4 @@ def verification(phone, carrier):
             code_in = raw_input("Please enter new code: ")
         elif option == 'C':
             print("Now complete.")
-            break
-    # else:
-    #     print('Number Saved.\nNow complete.')
+            quit()
