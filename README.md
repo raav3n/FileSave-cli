@@ -7,6 +7,16 @@ To check if you have python and correct version, open terminal and enter.
 ```
 python --version
 ```
+###How to install
+Give exceutable permission to install.sh
+```
+chmod +x install.sh
+```
+Run install.sh
+```
+./install.sh
+```
+You're set
 
 ### How to secure folder
 Replace "exfolder" with your folder name
