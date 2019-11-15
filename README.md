@@ -7,7 +7,7 @@ To check if you have python and correct version, open terminal and enter.
 ```
 python --version
 ```
-###How to install
+### How to install
 Give exceutable permission to install.sh
 ```
 chmod +x install.sh
