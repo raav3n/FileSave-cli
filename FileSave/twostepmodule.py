@@ -17,7 +17,7 @@ def verification(phone, carrier):
 
     server.starttls()
 
-    server.login( '1FileSafe1@gmail.com', 'yespcheneqycrzpv' )
+    server.login( 'EMAIL', 'PASS' )
 
     # Send text message through SMS gateway of destination number
     server.sendmail('FileSave', userinfo, code)
